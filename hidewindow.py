@@ -118,7 +118,8 @@ def connect_callbacks():
     source = S.obs_get_source_by_name(source_name)
     sh = S.obs_source_get_signal_handler(source)
     S.signal_handler_connect(sh, "save", update_source)
-    S.signal_handler_connect_global(sh, onActivate)
+    # for debug purposes
+    #S.signal_handler_connect_global(sh, onActivate)
     S.obs_source_release(source)
 
 def disconnect_callbacks():
@@ -126,7 +127,8 @@ def disconnect_callbacks():
     source = S.obs_get_source_by_name(source_name)
     sh = S.obs_source_get_signal_handler(source)
     S.signal_handler_disconnect(sh, "save", update_source)
-    S.signal_handler_connect_global(sh, onActivate)
+    #for debug purposes
+    #S.signal_handler_connect_global(sh, onActivate)
     S.obs_source_release(source)
 
 # Debug events
