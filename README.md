@@ -1,3 +1,5 @@
+# OUTDATED AND NO LONGER MAINTAINED
+
 # obs-scripts
 
 ## hidewindow.py
